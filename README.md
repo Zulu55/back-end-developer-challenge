@@ -1,4 +1,126 @@
-# DDB Back End Developer Challenge
+# Juan Zuluaga's Test Solution
+
+Full-stack application for D&D character management with .NET backend and React + TypeScript frontend.
+
+## Project Structure
+
+- **DnDBeyond.Backend** - ASP.NET Core Web API
+- **DnDBeyond.Frontend** - React + TypeScript with Vite
+- **DnDBeyond.Shared** - Shared entities and enums
+
+## Prerequisites
+
+- .NET 8 SDK
+- Node.js (v16 or higher)
+- SQL Server or SQL Server Express
+
+## Running Instructions
+
+### 1. Backend
+
+Open a PowerShell terminal and run:
+
+```powershell
+cd DnDBeyond.Backend
+dotnet restore
+dotnet run
+```
+
+The backend will be available at:
+- HTTPS: `https://localhost:7048`
+- HTTP: `http://localhost:5048`
+- Swagger UI: `https://localhost:7048/swagger`
+
+**Note:** The database is created and seeded automatically with some characters when the application starts.
+
+### 2. Frontend
+
+Open a new PowerShell terminal and run:
+
+```powershell
+cd DnDBeyond.Frontend
+npm install
+npm run dev
+```
+
+The frontend will be available at:
+- `http://localhost:3000`
+
+### 3. Access the Application
+
+Once both services are running:
+1. Open your browser to `http://localhost:3000`
+2. You will see Briv's character sheet with all his stats
+
+## Implemented Features
+
+### Backend API
+- ✅ Character management (CRUD)
+- ✅ Deal Damage with damage type calculations
+- ✅ Defense system (immunity, resistance, vulnerability)
+- ✅ Character healing
+- ✅ Temporary Hit Points management
+- ✅ Entity Framework Core with SQL Server
+- ✅ Swagger documentation
+
+### Frontend
+- ✅ Character sheet display:
+  - Name, class, and level
+  - Hit Points (current/maximum)
+  - Temporary Hit Points
+  - Ability scores with modifiers
+- ✅ Action controls:
+  - Deal damage (with damage type selection)
+  - Heal character
+  - Set temporary HP
+- ✅ Auto-refresh every 5 seconds
+- ✅ Responsive design (mobile, tablet, desktop)
+- ✅ Full accessibility (keyboard navigation, screen readers)
+- ✅ CSS Modules for styling
+
+## API Endpoints
+
+- `GET /api/characters` - Get all characters
+- `GET /api/characters/{id}` - Get character by ID
+- `POST /api/characters/{id}/damage` - Deal damage to character
+- `POST /api/characters/{id}/heal` - Heal character
+- `POST /api/characters/{id}/temp-hp` - Set temporary HP
+
+## Technologies Used
+
+**Backend:**
+- .NET 8
+- ASP.NET Core Web API
+- Entity Framework Core
+- SQL Server
+
+**Frontend:**
+- React 18
+- TypeScript
+- Vite 4
+- CSS Modules
+
+## Troubleshooting
+
+### Backend won't start
+- Verify that SQL Server is running
+- Check the connection string in `appsettings.json`
+
+### Frontend can't connect to backend
+- Ensure the backend is running on port 7048
+- Verify the proxy configuration in `vite.config.ts`
+
+### Node.js error
+- If you have Node.js 16, the project uses Vite 4 (compatible)
+- For Vite 5, upgrade Node.js to v18 or higher
+
+## Author
+
+**Juan Zuluaga**
+
+---
+
+# DDB Back End Developer Challenge (Original Requirements)
 
 ### Overview
 This task focuses on creating an API for managing a player character's Hit Points (HP) within our game. The API will enable clients to perform various operations related to HP, including dealing damage of different types, considering character resistances and immunities, healing, and adding temporary Hit Points. The task requires building a service that interacts with HP data provided in the `briv.json` file and persists throughout the application's lifetime.
