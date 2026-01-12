@@ -33,6 +33,8 @@ The backend will be available at:
 
 **Note:** The database is created and seeded automatically with some characters when the application starts.
 
+<img width="1306" height="490" alt="image" src="https://github.com/user-attachments/assets/d7be22bc-d186-42b1-b7aa-055db3bf3916" />
+
 ### 2. Frontend
 
 Open a new PowerShell terminal and run:
@@ -45,6 +47,8 @@ npm run dev
 
 The frontend will be available at:
 - `http://localhost:3000`
+
+<img width="877" height="925" alt="image" src="https://github.com/user-attachments/assets/c8f385d2-892e-4eda-a20a-a919198323d5" />
 
 ### 3. Access the Application
 
