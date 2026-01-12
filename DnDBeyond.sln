@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36623.8 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DnDBeyond.Backend", "DnDBeyond.Backend\DnDBeyond.Backend.csproj", "{6B05E527-7C8F-4C3D-9928-F144A050149E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DnDBeyond.Shared", "DnDBeyond.Shared\DnDBeyond.Shared.csproj", "{6C8B6CA2-A11F-4AAD-AE71-8F757A9DC447}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6B05E527-7C8F-4C3D-9928-F144A050149E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B05E527-7C8F-4C3D-9928-F144A050149E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B05E527-7C8F-4C3D-9928-F144A050149E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B05E527-7C8F-4C3D-9928-F144A050149E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C8B6CA2-A11F-4AAD-AE71-8F757A9DC447}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C8B6CA2-A11F-4AAD-AE71-8F757A9DC447}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C8B6CA2-A11F-4AAD-AE71-8F757A9DC447}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C8B6CA2-A11F-4AAD-AE71-8F757A9DC447}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6564287A-E033-47D8-8F19-CDF039DA0622}
+	EndGlobalSection
+EndGlobal

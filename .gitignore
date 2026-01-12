@@ -1,0 +1,67 @@
+# Visual Studio & .NET Core common ignores
+# See: https://github.com/github/gitignore/blob/main/VisualStudio.gitignore
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build results
+[Bb]in/
+[Oo]bj/
+
+# Visual Studio Code
+.vscode/
+
+# Visual Studio workspace settings
+.vs/
+
+# Rider
+.idea/
+*.sln.iml
+
+# NuGet
+*.nupkg
+packages/
+.nuget/
+project.lock.json
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# Publish output
+publish/
+
+# Logs
+*.log
+
+# Database files
+*.mdf
+*.ldf
+*.db
+*.db-journal
+
+# Test results
+TestResults/
+
+# Resharper
+_ReSharper*/
+*.DotSettings.user
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Temporary files
+*.tmp
+*.temp
+
+# JetBrains Rider caches
+.idea/
+
+# Optional: editor backups
+*~
+
+# End of .gitignore
