@@ -1,0 +1,153 @@
+.characterSheet {
+  background-color: #f5f5f5;
+  border: 2px solid #333;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  border-bottom: 2px solid #333;
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.characterName {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0 0 0.5rem 0;
+  color: #1a1a1a;
+}
+
+.classLevel {
+  font-size: 1.25rem;
+  color: #555;
+  margin: 0;
+}
+
+.hitPointsSection {
+  margin-bottom: 1.5rem;
+}
+
+.hitPointsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.hpBox {
+  background-color: white;
+  border: 2px solid #333;
+  border-radius: 4px;
+  padding: 1rem;
+}
+
+.hpLabel {
+  font-size: 0.875rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #666;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.hpValue {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #1a1a1a;
+}
+
+.currentHp {
+  color: #c53030;
+}
+
+.maxHp {
+  color: #2d3748;
+}
+
+.tempHp {
+  color: #3182ce;
+}
+
+.statsSection {
+  margin-top: 1.5rem;
+}
+
+.sectionTitle {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #1a1a1a;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+}
+
+.statBox {
+  background-color: white;
+  border: 2px solid #333;
+  border-radius: 4px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.statName {
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.statValue {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1a1a1a;
+}
+
+.statModifier {
+  font-size: 1rem;
+  color: #555;
+  margin-top: 0.25rem;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .characterSheet {
+    padding: 1rem;
+  }
+
+  .characterName {
+    font-size: 1.5rem;
+  }
+
+  .classLevel {
+    font-size: 1rem;
+  }
+
+  .hitPointsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hpValue {
+    font-size: 1.5rem;
+  }
+
+  .statValue {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .statsGrid {
+    grid-template-columns: 1fr;
+  }
+}

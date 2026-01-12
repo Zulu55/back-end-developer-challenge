@@ -1,0 +1,111 @@
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.appTitle {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #1a1a1a;
+  margin: 0 0 0.5rem 0;
+}
+
+.subtitle {
+  font-size: 1.125rem;
+  color: #666;
+  margin: 0;
+}
+
+.loading {
+  text-align: center;
+  padding: 3rem;
+  font-size: 1.25rem;
+  color: #555;
+}
+
+.error {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: #fed7d7;
+  border: 2px solid #fc8181;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.errorTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #742a2a;
+  margin: 0 0 0.5rem 0;
+}
+
+.errorMessage {
+  color: #9b2c2c;
+  margin: 0;
+}
+
+.characterSelector {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background-color: white;
+  border: 2px solid #333;
+  border-radius: 8px;
+}
+
+.selectorLabel {
+  display: block;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #2d3748;
+}
+
+.select {
+  width: 100%;
+  max-width: 400px;
+  padding: 0.625rem;
+  font-size: 1rem;
+  border: 2px solid #cbd5e0;
+  border-radius: 4px;
+  background-color: white;
+  color: #1a1a1a;
+}
+
+.select:focus {
+  outline: none;
+  border-color: #3182ce;
+  box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.2);
+}
+
+.autoRefreshNote {
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: #bee3f8;
+  border: 1px solid #63b3ed;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 0.875rem;
+  color: #2c5282;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .app {
+    padding: 1rem;
+  }
+
+  .appTitle {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+}

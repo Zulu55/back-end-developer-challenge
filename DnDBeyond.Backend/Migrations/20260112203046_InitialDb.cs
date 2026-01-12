@@ -2,12 +2,10 @@
 
 #nullable disable
 
-#pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
-
 namespace DnDBeyond.Backend.Migrations
 {
     /// <inheritdoc />
-    public partial class initialDb : Migration
+    public partial class InitialDb : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -20,7 +18,8 @@ namespace DnDBeyond.Backend.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Level = table.Column<int>(type: "int", nullable: false),
-                    HitPoints = table.Column<int>(type: "int", nullable: false)
+                    HitPoints = table.Column<int>(type: "int", nullable: false),
+                    TempHitPoints = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -135,64 +134,6 @@ namespace DnDBeyond.Backend.Migrations
                         principalTable: "Items",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.InsertData(
-                table: "Characters",
-                columns: new[] { "Id", "HitPoints", "Level", "Name" },
-                values: new object[,]
-                {
-                    { 1, 25, 5, "Briv" },
-                    { 2, 18, 3, "Elara" }
-                });
-
-            migrationBuilder.InsertData(
-                table: "CharacterClasses",
-                columns: new[] { "Id", "CharacterId", "ClassLevel", "HitDiceValue", "Name" },
-                values: new object[,]
-                {
-                    { 1, 1, 5, 10, "Fighter" },
-                    { 2, 2, 3, 6, "Wizard" }
-                });
-
-            migrationBuilder.InsertData(
-                table: "Defenses",
-                columns: new[] { "Id", "CharacterId", "DefenseType", "Type" },
-                values: new object[,]
-                {
-                    { 1, 1, 1, 3 },
-                    { 2, 1, 0, 2 },
-                    { 3, 2, 2, 8 },
-                    { 4, 2, 0, 4 }
-                });
-
-            migrationBuilder.InsertData(
-                table: "Items",
-                columns: new[] { "Id", "CharacterId", "Name" },
-                values: new object[,]
-                {
-                    { 1, 1, "Ioun Stone of Fortitude" },
-                    { 2, 1, "Longsword +1" },
-                    { 3, 2, "Staff of Fire" }
-                });
-
-            migrationBuilder.InsertData(
-                table: "Stats",
-                columns: new[] { "Id", "CharacterId", "Charisma", "Constitution", "Dexterity", "Intelligence", "Strength", "Wisdom" },
-                values: new object[,]
-                {
-                    { 1, 1, 8, 14, 12, 13, 15, 10 },
-                    { 2, 2, 10, 12, 14, 16, 8, 13 }
-                });
-
-            migrationBuilder.InsertData(
-                table: "ItemModifiers",
-                columns: new[] { "Id", "AffectedObject", "AffectedValue", "ItemId", "Value" },
-                values: new object[,]
-                {
-                    { 1, "stats", 2, 1, 2 },
-                    { 2, "attack", 0, 2, 1 },
-                    { 3, "spellDamage", 3, 3, 2 }
                 });
 
             migrationBuilder.CreateIndex(

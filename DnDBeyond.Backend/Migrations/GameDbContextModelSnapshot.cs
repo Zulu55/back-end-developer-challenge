@@ -39,25 +39,12 @@ namespace DnDBeyond.Backend.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("TempHitPoints")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.ToTable("Characters");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            HitPoints = 25,
-                            Level = 5,
-                            Name = "Briv"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            HitPoints = 18,
-                            Level = 3,
-                            Name = "Elara"
-                        });
                 });
 
             modelBuilder.Entity("DnDBeyond.Shared.Entities.CharacterClass", b =>
@@ -86,24 +73,6 @@ namespace DnDBeyond.Backend.Migrations
                     b.HasIndex("CharacterId");
 
                     b.ToTable("CharacterClasses");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            CharacterId = 1,
-                            ClassLevel = 5,
-                            HitDiceValue = 10,
-                            Name = "Fighter"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            CharacterId = 2,
-                            ClassLevel = 3,
-                            HitDiceValue = 6,
-                            Name = "Wizard"
-                        });
                 });
 
             modelBuilder.Entity("DnDBeyond.Shared.Entities.Defense", b =>
@@ -130,36 +99,6 @@ namespace DnDBeyond.Backend.Migrations
                     b.HasIndex("CharacterId");
 
                     b.ToTable("Defenses");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            CharacterId = 1,
-                            DefenseType = 1,
-                            Type = 3
-                        },
-                        new
-                        {
-                            Id = 2,
-                            CharacterId = 1,
-                            DefenseType = 0,
-                            Type = 2
-                        },
-                        new
-                        {
-                            Id = 3,
-                            CharacterId = 2,
-                            DefenseType = 2,
-                            Type = 8
-                        },
-                        new
-                        {
-                            Id = 4,
-                            CharacterId = 2,
-                            DefenseType = 0,
-                            Type = 4
-                        });
                 });
 
             modelBuilder.Entity("DnDBeyond.Shared.Entities.Item", b =>
@@ -182,26 +121,6 @@ namespace DnDBeyond.Backend.Migrations
                     b.HasIndex("CharacterId");
 
                     b.ToTable("Items");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            CharacterId = 1,
-                            Name = "Ioun Stone of Fortitude"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            CharacterId = 1,
-                            Name = "Longsword +1"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            CharacterId = 2,
-                            Name = "Staff of Fire"
-                        });
                 });
 
             modelBuilder.Entity("DnDBeyond.Shared.Entities.ItemModifier", b =>
@@ -232,32 +151,6 @@ namespace DnDBeyond.Backend.Migrations
                         .IsUnique();
 
                     b.ToTable("ItemModifiers");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            AffectedObject = "stats",
-                            AffectedValue = 2,
-                            ItemId = 1,
-                            Value = 2
-                        },
-                        new
-                        {
-                            Id = 2,
-                            AffectedObject = "attack",
-                            AffectedValue = 0,
-                            ItemId = 2,
-                            Value = 1
-                        },
-                        new
-                        {
-                            Id = 3,
-                            AffectedObject = "spellDamage",
-                            AffectedValue = 3,
-                            ItemId = 3,
-                            Value = 2
-                        });
                 });
 
             modelBuilder.Entity("DnDBeyond.Shared.Entities.Stats", b =>
@@ -295,30 +188,6 @@ namespace DnDBeyond.Backend.Migrations
                         .IsUnique();
 
                     b.ToTable("Stats");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            CharacterId = 1,
-                            Charisma = 8,
-                            Constitution = 14,
-                            Dexterity = 12,
-                            Intelligence = 13,
-                            Strength = 15,
-                            Wisdom = 10
-                        },
-                        new
-                        {
-                            Id = 2,
-                            CharacterId = 2,
-                            Charisma = 10,
-                            Constitution = 12,
-                            Dexterity = 14,
-                            Intelligence = 16,
-                            Strength = 8,
-                            Wisdom = 13
-                        });
                 });
 
             modelBuilder.Entity("DnDBeyond.Shared.Entities.CharacterClass", b =>
