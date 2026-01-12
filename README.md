@@ -48,7 +48,7 @@ npm run dev
 The frontend will be available at:
 - `http://localhost:3000`
 
-<img width="877" height="925" alt="image" src="https://github.com/user-attachments/assets/c8f385d2-892e-4eda-a20a-a919198323d5" />
+<img width="1005" height="882" alt="image" src="https://github.com/user-attachments/assets/c52dc64c-56a1-4a7f-86e9-ad55a41a9565" />
 
 ### 3. Access the Application
 
