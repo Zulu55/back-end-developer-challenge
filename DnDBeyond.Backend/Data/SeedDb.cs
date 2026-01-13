@@ -1,8 +1,5 @@
 ﻿using DnDBeyond.Shared.Entities;
 using DnDBeyond.Shared.Enums;
-using System.Linq;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace DnDBeyond.Backend.Data;
 
@@ -45,38 +42,37 @@ public class SeedDb
             Name = "Briv",
             Level = 5,
             HitPoints = 25,
-            Classes = new List<CharacterClass>
-            {
-                new CharacterClass
+            Classes =
+            [
+                new()
                 {
                     Name = "Fighter",
                     HitDiceValue = 10,
                     ClassLevel = 5
                 },
-                new CharacterClass
+                new()
                 {
                     Name = "Rogue",
                     HitDiceValue = 8,
                     ClassLevel = 2
                 }
-            },
-            Defenses = new List<Defense>
-            {
-                new Defense
+            ],
+            Defenses =
+            [
+                new()
                 {
                     Type = DamageType.Fire,
                     DefenseType = DefenseType.Resistance
                 },
-                new Defense
+                new()
                 {
                     Type = DamageType.Force,
                     DefenseType = DefenseType.Immunity
                 }
-            },
-            Items = new List<Item>
-            {
-                new Item
-                {
+            ],
+            Items =
+            [
+                new() {
                     Name = "Longsword +1",
                     Modifier = new ItemModifier
                     {
@@ -85,8 +81,7 @@ public class SeedDb
                         Value = 1
                     }
                 },
-                new Item
-                {
+                new() {
                     Name = "Ioun Stone of Fortitude",
                     Modifier = new ItemModifier
                     {
@@ -95,7 +90,7 @@ public class SeedDb
                         Value = 2
                     }
                 }
-            },
+            ],
             Stats = new Stats
             {
                 Strength = 16,
@@ -115,27 +110,27 @@ public class SeedDb
             Name = "Elara",
             Level = 7,
             HitPoints = 30,
-            Classes = new List<CharacterClass>
-            {
-                new CharacterClass
+            Classes =
+            [
+                new()
                 {
                     Name = "Wizard",
                     HitDiceValue = 6,
                     ClassLevel = 7
                 }
-            },
-            Defenses = new List<Defense>
-            {
+            ],
+            Defenses =
+            [
                 // use Force as a proxy for arcane/magical defense
-                new Defense
+                new()
                 {
                     Type = DamageType.Force,
                     DefenseType = DefenseType.Resistance
                 }
-            },
-            Items = new List<Item>
-            {
-                new Item
+            ],
+            Items =
+            [
+                new()
                 {
                     Name = "Wand of the Magi",
                     Modifier = new ItemModifier
@@ -145,7 +140,7 @@ public class SeedDb
                         Value = 2
                     }
                 },
-                new Item
+                new()
                 {
                     Name = "Cloak of Protection",
                     Modifier = new ItemModifier
@@ -155,7 +150,7 @@ public class SeedDb
                         Value = 1
                     }
                 }
-            },
+            ],
             Stats = new Stats
             {
                 Strength = 8,
@@ -175,31 +170,31 @@ public class SeedDb
             Name = "Thorm",
             Level = 6,
             HitPoints = 48,
-            Classes = new List<CharacterClass>
-            {
-                new CharacterClass
+            Classes =
+            [
+                new()
                 {
                     Name = "Paladin",
                     HitDiceValue = 10,
                     ClassLevel = 6
                 }
-            },
-            Defenses = new List<Defense>
-            {
-                new Defense
+            ],
+            Defenses =
+            [
+                new()
                 {
                     Type = DamageType.Radiant,
                     DefenseType = DefenseType.Immunity
                 },
-                new Defense
+                new()
                 {
                     Type = DamageType.Poison,
                     DefenseType = DefenseType.Resistance
                 }
-            },
-            Items = new List<Item>
-            {
-                new Item
+            ],
+            Items =
+            [
+                new()
                 {
                     Name = "Holy Avenger",
                     Modifier = new ItemModifier
@@ -209,7 +204,7 @@ public class SeedDb
                         Value = 2
                     }
                 },
-                new Item
+                new()
                 {
                     Name = "Shield of Faith",
                     Modifier = new ItemModifier
@@ -219,7 +214,7 @@ public class SeedDb
                         Value = 1
                     }
                 }
-            },
+            ],
             Stats = new Stats
             {
                 Strength = 18,
@@ -239,26 +234,26 @@ public class SeedDb
             Name = "Nyx",
             Level = 5,
             HitPoints = 28,
-            Classes = new List<CharacterClass>
-            {
-                new CharacterClass
+            Classes =
+            [
+                new()
                 {
                     Name = "Rogue",
                     HitDiceValue = 8,
                     ClassLevel = 5
                 }
-            },
-            Defenses = new List<Defense>
-            {
-                new Defense
+            ],
+            Defenses =
+            [
+                new()
                 {
                     Type = DamageType.Psychic,
                     DefenseType = DefenseType.Vulnerability
                 }
-            },
-            Items = new List<Item>
-            {
-                new Item
+            ],
+            Items =
+            [
+                new()
                 {
                     Name = "Dagger of Venom",
                     Modifier = new ItemModifier
@@ -268,7 +263,7 @@ public class SeedDb
                         Value = 1
                     }
                 },
-                new Item
+                new()
                 {
                     Name = "Boots of Elvenkind",
                     Modifier = new ItemModifier
@@ -278,7 +273,7 @@ public class SeedDb
                         Value = 2
                     }
                 }
-            },
+            ],
             Stats = new Stats
             {
                 Strength = 10,
@@ -298,26 +293,26 @@ public class SeedDb
             Name = "Lira",
             Level = 4,
             HitPoints = 22,
-            Classes = new List<CharacterClass>
-            {
-                new CharacterClass
+            Classes =
+            [
+                new()
                 {
                     Name = "Bard",
                     HitDiceValue = 8,
                     ClassLevel = 4
                 }
-            },
-            Defenses = new List<Defense>
-            {
-                new Defense
+            ],
+            Defenses =
+            [
+                new()
                 {
                     Type = DamageType.Thunder,
                     DefenseType = DefenseType.Resistance
                 }
-            },
-            Items = new List<Item>
-            {
-                new Item
+            ],
+            Items =
+            [
+                new()
                 {
                     Name = "Lute of Soothing",
                     Modifier = new ItemModifier
@@ -327,7 +322,7 @@ public class SeedDb
                         Value = 2
                     }
                 }
-            },
+            ],
             Stats = new Stats
             {
                 Strength = 9,
