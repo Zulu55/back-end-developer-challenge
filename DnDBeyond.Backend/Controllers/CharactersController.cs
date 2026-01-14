@@ -143,7 +143,7 @@ public class CharactersController : ControllerBase
         if (character == null) return NotFound();
 
         // Temp HP are not additive; set to the higher value
-        character.TempHitPoints = System.Math.Max(character.TempHitPoints, req.Amount);
+        character.TempHitPoints = Math.Max(character.TempHitPoints, req.Amount);
         await _context.SaveChangesAsync();
 
         return Ok(character);
